@@ -1,0 +1,222 @@
+<deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
+  <configuration file="D:\INFORMACION\Documents\señales\bienvenida.prj" location="D:\INFORMACION\Documents\señales" name="bienvenida" target="target.ezdeploy.standalone" target-name="Application Compiler">
+    <param.appname>SAPT</param.appname>
+    <param.icon>${PROJECT_ROOT}\bienvenida_resources\icon.ico</param.icon>
+    <param.icons>
+      <file>${PROJECT_ROOT}\bienvenida_resources\icon_48.png</file>
+      <file>${PROJECT_ROOT}\bienvenida_resources\icon_32.png</file>
+      <file>${PROJECT_ROOT}\bienvenida_resources\icon_24.png</file>
+      <file>${PROJECT_ROOT}\bienvenida_resources\icon_16.png</file>
+    </param.icons>
+    <param.version>3.0</param.version>
+    <param.authnamewatermark>Camilo H, Paola, Sebastian, Carlos, Miguel</param.authnamewatermark>
+    <param.email>camiloandreshp@ufps.edu.co, paolaandreacaco@ufps.edu.co, sebastianro@ufps.edu.co, carlososwaldocp@ufps.edu.co, herediamigueljoseb@ufps.edu.co</param.email>
+    <param.company>UFPS</param.company>
+    <param.summary>Aplicación para el aprendizaje y la enseñanza de señales</param.summary>
+    <param.description>Esta aplicacio busca crear una cercania didactica entre estudiante-materia de tal forma que se le haga mas ameno el aprendizaje, ademas e brindarle ayuda al docente a dirigir la materia.</param.description>
+    <param.screenshot>${PROJECT_ROOT}\Portadacrack.jpg</param.screenshot>
+    <param.guid />
+    <param.installpath.string>\UFPS\SAPT\</param.installpath.string>
+    <param.installpath.combo>option.installpath.programfiles</param.installpath.combo>
+    <param.logo>${PROJECT_ROOT}\Portadacrack.jpg</param.logo>
+    <param.install.notes>En la carpeta de instalación se guardaran los archivos generados, los audios filtrados entre otros</param.install.notes>
+    <param.target.install.notes />
+    <param.intermediate>${PROJECT_ROOT}\bienvenida\for_testing</param.intermediate>
+    <param.files.only>${PROJECT_ROOT}\bienvenida\for_redistribution_files_only</param.files.only>
+    <param.output>${PROJECT_ROOT}\bienvenida\for_redistribution</param.output>
+    <param.logdir>${PROJECT_ROOT}\bienvenida</param.logdir>
+    <param.enable.clean.build>false</param.enable.clean.build>
+    <param.user.defined.mcr.options />
+    <param.target.type>subtarget.standalone</param.target.type>
+    <param.support.packages />
+    <param.web.mcr>false</param.web.mcr>
+    <param.package.mcr>true</param.package.mcr>
+    <param.no.mcr>false</param.no.mcr>
+    <param.web.mcr.name>MyAppInstaller_web</param.web.mcr.name>
+    <param.package.mcr.name>MyAppInstaller_mcr</param.package.mcr.name>
+    <param.no.mcr.name>MyAppInstaller_app</param.no.mcr.name>
+    <param.windows.command.prompt>true</param.windows.command.prompt>
+    <param.create.log>false</param.create.log>
+    <param.log.file />
+    <param.native.matlab>false</param.native.matlab>
+    <param.checkbox>false</param.checkbox>
+    <param.example />
+    <param.help.text />
+    <unset>
+      <param.guid />
+      <param.installpath.combo />
+      <param.target.install.notes />
+      <param.intermediate />
+      <param.files.only />
+      <param.output />
+      <param.logdir />
+      <param.enable.clean.build />
+      <param.user.defined.mcr.options />
+      <param.target.type />
+      <param.support.packages />
+      <param.no.mcr />
+      <param.web.mcr.name />
+      <param.package.mcr.name />
+      <param.no.mcr.name />
+      <param.windows.command.prompt />
+      <param.create.log />
+      <param.log.file />
+      <param.native.matlab />
+      <param.checkbox />
+      <param.example />
+      <param.help.text />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}\bienvenida.m</file>
+    </fileset.main>
+    <fileset.resources>
+      <file>${PROJECT_ROOT}\Armoni.fig</file>
+      <file>${PROJECT_ROOT}\Armoni.m</file>
+      <file>${PROJECT_ROOT}\bienvenida.fig</file>
+      <file>${PROJECT_ROOT}\bienvenida.m</file>
+      <file>${PROJECT_ROOT}\botones.jpg</file>
+      <file>${PROJECT_ROOT}\Continuo.fig</file>
+      <file>${PROJECT_ROOT}\Continuo.m</file>
+      <file>${PROJECT_ROOT}\Control.fig</file>
+      <file>${PROJECT_ROOT}\Control.m</file>
+      <file>${PROJECT_ROOT}\convolucion.fig</file>
+      <file>${PROJECT_ROOT}\convolucion.m</file>
+      <file>${PROJECT_ROOT}\convu_con.fig</file>
+      <file>${PROJECT_ROOT}\convu_con.m</file>
+      <file>${PROJECT_ROOT}\cuadradacon.fig</file>
+      <file>${PROJECT_ROOT}\cuadradacon.m</file>
+      <file>${PROJECT_ROOT}\cuadradadis.fig</file>
+      <file>${PROJECT_ROOT}\cuadradadis.m</file>
+      <file>${PROJECT_ROOT}\dientescon.fig</file>
+      <file>${PROJECT_ROOT}\dientescon.m</file>
+      <file>${PROJECT_ROOT}\dientesdis.fig</file>
+      <file>${PROJECT_ROOT}\dientesdis.m</file>
+      <file>${PROJECT_ROOT}\Discreto.fig</file>
+      <file>${PROJECT_ROOT}\Discreto.m</file>
+      <file>${PROJECT_ROOT}\escaloncon.fig</file>
+      <file>${PROJECT_ROOT}\escaloncon.m</file>
+      <file>${PROJECT_ROOT}\escalondis.fig</file>
+      <file>${PROJECT_ROOT}\escalondis.m</file>
+      <file>${PROJECT_ROOT}\experimento.JPG</file>
+      <file>${PROJECT_ROOT}\exponencialcon.fig</file>
+      <file>${PROJECT_ROOT}\exponencialcon.m</file>
+      <file>${PROJECT_ROOT}\exponencialdis.fig</file>
+      <file>${PROJECT_ROOT}\exponencialdis.m</file>
+      <file>${PROJECT_ROOT}\fibra.asv</file>
+      <file>${PROJECT_ROOT}\fibra.fig</file>
+      <file>${PROJECT_ROOT}\fibra.m</file>
+      <file>${PROJECT_ROOT}\Filtro.fig</file>
+      <file>${PROJECT_ROOT}\Filtro.m</file>
+      <file>${PROJECT_ROOT}\fondocrack.jpg</file>
+      <file>${PROJECT_ROOT}\fondogeneradores.jpg</file>
+      <file>${PROJECT_ROOT}\generador.fig</file>
+      <file>${PROJECT_ROOT}\generador.m</file>
+      <file>${PROJECT_ROOT}\generador_de_señales.fig</file>
+      <file>${PROJECT_ROOT}\generador_de_señales.m</file>
+      <file>${PROJECT_ROOT}\generadorcon.fig</file>
+      <file>${PROJECT_ROOT}\generadorcon.m</file>
+      <file>${PROJECT_ROOT}\generadordis.fig</file>
+      <file>${PROJECT_ROOT}\generadordis.m</file>
+      <file>${PROJECT_ROOT}\generadormenu.fig</file>
+      <file>${PROJECT_ROOT}\generadormenu.m</file>
+      <file>${PROJECT_ROOT}\handel.wav</file>
+      <file>${PROJECT_ROOT}\impulso.fig</file>
+      <file>${PROJECT_ROOT}\impulso.m</file>
+      <file>${PROJECT_ROOT}\logo.PNG</file>
+      <file>${PROJECT_ROOT}\logoInicio.PNG</file>
+      <file>${PROJECT_ROOT}\Menu.fig</file>
+      <file>${PROJECT_ROOT}\Menu.m</file>
+      <file>${PROJECT_ROOT}\Menu_conv.fig</file>
+      <file>${PROJECT_ROOT}\Menu_conv.m</file>
+      <file>${PROJECT_ROOT}\menut.fig</file>
+      <file>${PROJECT_ROOT}\menut.m</file>
+      <file>${PROJECT_ROOT}\Portada 2.2.jpg</file>
+      <file>${PROJECT_ROOT}\portada.jpg</file>
+      <file>${PROJECT_ROOT}\Portadacrack.jpg</file>
+      <file>${PROJECT_ROOT}\rampacon.fig</file>
+      <file>${PROJECT_ROOT}\rampacon.m</file>
+      <file>${PROJECT_ROOT}\rampadis.fig</file>
+      <file>${PROJECT_ROOT}\rampadis.m</file>
+      <file>${PROJECT_ROOT}\rectangularcon.fig</file>
+      <file>${PROJECT_ROOT}\rectangularcon.m</file>
+      <file>${PROJECT_ROOT}\rectangulardis.fig</file>
+      <file>${PROJECT_ROOT}\rectangulardis.m</file>
+      <file>${PROJECT_ROOT}\SA&amp;PT User Guide 2.0.pdf</file>
+      <file>${PROJECT_ROOT}\senoidecon.fig</file>
+      <file>${PROJECT_ROOT}\senoidecon.m</file>
+      <file>${PROJECT_ROOT}\senoidedis.fig</file>
+      <file>${PROJECT_ROOT}\senoidedis.m</file>
+      <file>${PROJECT_ROOT}\señal_filtro.wav</file>
+      <file>${PROJECT_ROOT}\Tfourier.fig</file>
+      <file>${PROJECT_ROOT}\Tfourier.m</file>
+      <file>${PROJECT_ROOT}\triangulocon.fig</file>
+      <file>${PROJECT_ROOT}\triangulocon.m</file>
+      <file>${PROJECT_ROOT}\triangulodis.fig</file>
+      <file>${PROJECT_ROOT}\triangulodis.m</file>
+    </fileset.resources>
+    <fileset.package />
+    <fileset.depfun />
+    <build-deliverables>
+      <file location="${PROJECT_ROOT}\bienvenida\for_testing" name="readme.txt" optional="true">D:\INFORMACION\Documents\señales\bienvenida\for_testing\readme.txt</file>
+      <file location="${PROJECT_ROOT}\bienvenida\for_testing" name="splash.png" optional="false">D:\INFORMACION\Documents\señales\bienvenida\for_testing\splash.png</file>
+      <file location="${PROJECT_ROOT}\bienvenida\for_testing" name="SAPT.exe" optional="false">D:\INFORMACION\Documents\señales\bienvenida\for_testing\SAPT.exe</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>C:\Program Files\MATLAB\R2017b</root>
+      <toolboxes>
+        <toolbox name="fixedpoint" />
+        <toolbox name="matlabcoder" />
+        <toolbox name="matlabhdlcoder" />
+        <toolbox name="embeddedcoder" />
+        <toolbox name="gpucoder" />
+        <toolbox name="polyspacebugfinder" />
+      </toolboxes>
+      <toolbox>
+        <fixedpoint>
+          <enabled>true</enabled>
+        </fixedpoint>
+      </toolbox>
+      <toolbox>
+        <matlabcoder>
+          <enabled>true</enabled>
+        </matlabcoder>
+      </toolbox>
+      <toolbox>
+        <matlabhdlcoder>
+          <enabled>true</enabled>
+        </matlabhdlcoder>
+      </toolbox>
+      <toolbox>
+        <embeddedcoder>
+          <enabled>true</enabled>
+        </embeddedcoder>
+      </toolbox>
+      <toolbox>
+        <gpucoder>
+          <enabled>true</enabled>
+        </gpucoder>
+      </toolbox>
+      <toolbox>
+        <polyspacebugfinder>
+          <enabled>true</enabled>
+        </polyspacebugfinder>
+      </toolbox>
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>10.0</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>

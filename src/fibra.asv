@@ -1,0 +1,178 @@
+function varargout = fibra(varargin)
+% FIBRA MATLAB code for fibra.fig
+%      FIBRA, by itself, creates a new FIBRA or raises the existing
+%      singleton*.
+%
+%      H = FIBRA returns the handle to a new FIBRA or the handle to
+%      the existing singleton*.
+%
+%      FIBRA('CALLBACK',hObject,eventData,handles,...) calls the local
+%      function named CALLBACK in FIBRA.M with the given input arguments.
+%
+%      FIBRA('Property','Value',...) creates a new FIBRA or raises the
+%      existing singleton*.  Starting from the left, property value pairs are
+%      applied to the GUI before fibra_OpeningFcn gets called.  An
+%      unrecognized property name or invalid value makes property application
+%      stop.  All inputs are passed to fibra_OpeningFcn via varargin.
+%
+%      *See GUI Options on GUIDE's Tools menu.  Choose "GUI allows only one
+%      instance to run (singleton)".
+%
+% See also: GUIDE, GUIDATA, GUIHANDLES
+
+% Edit the above text to modify the response to help fibra
+
+% Last Modified by GUIDE v2.5 07-Dec-2020 18:39:38
+
+% Begin initialization code - DO NOT EDIT
+gui_Singleton = 1;
+gui_State = struct('gui_Name',       mfilename, ...
+                   'gui_Singleton',  gui_Singleton, ...
+                   'gui_OpeningFcn', @fibra_OpeningFcn, ...
+                   'gui_OutputFcn',  @fibra_OutputFcn, ...
+                   'gui_LayoutFcn',  [] , ...
+                   'gui_Callback',   []);
+if nargin && ischar(varargin{1})
+    gui_State.gui_Callback = str2func(varargin{1});
+end
+
+if nargout
+    [varargout{1:nargout}] = gui_mainfcn(gui_State, varargin{:});
+else
+    gui_mainfcn(gui_State, varargin{:});
+end
+% End initialization code - DO NOT EDIT
+
+
+% --- Executes just before fibra is made visible.
+function fibra_OpeningFcn(hObject, eventdata, handles, varargin)
+% This function has no output args, see OutputFcn.
+% hObject    handle to figure
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+% varargin   command line arguments to fibra (see VARARGIN)
+
+% Choose default command line output for fibra
+handles.output = hObject;
+
+% Update handles structure
+guidata(hObject, handles);
+
+% UIWAIT makes fibra wait for user response (see UIRESUME)
+% uiwait(handles.figure1);
+
+
+% --- Outputs from this function are returned to the command line.
+function varargout = fibra_OutputFcn(hObject, eventdata, handles) 
+% varargout  cell array for returning output args (see VARARGOUT);
+% hObject    handle to figure
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Get default command line output from handles structure
+varargout{1} = handles.output;
+
+
+
+function txt_tasa_Callback(hObject, eventdata, handles)
+% hObject    handle to txt_tasa (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of txt_tasa as text
+%        str2double(get(hObject,'String')) returns contents of txt_tasa as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function txt_tasa_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to txt_tasa (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function txt_dz_Callback(hObject, eventdata, handles)
+% hObject    handle to txt_dz (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of txt_dz as text
+%        str2double(get(hObject,'String')) returns contents of txt_dz as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function txt_dz_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to txt_dz (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+% --- Executes on button press in pushbutton1.
+function pushbutton1_Callback(hObject, eventdata, handles)
+% hObject    handle to pushbutton1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+close fibra;
+menut;
+
+
+% --- Executes on button press in pushbutton2.
+function pushbutton2_Callback(hObject, eventdata, handles)
+% hObject    handle to pushbutton2 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+%%%%Compensación BackPropagation
+
+clear all;
+%%%%%%%%Parámetros de Entrada%%%%%%%%
+R=10e9;                                          %Tasa de transmisión
+Tb=1/R;                                         %Tiempo de bit
+% sec=randint(1,n_bits);                        %Secuencia de "1" y "0"
+sec=[0 1 0];                %aca va la funcion
+n_bits=length(sec);                             %Núero de bits
+w=2*pi*1/Tb;                                    %Frecuencia angular
+Fs=64/Tb;                                       %Frecuencia de Muestreo
+Ts=1/Fs;                                        %Tiempo de bit
+Nmpb=(Tb/Ts)+1;                                 %Número de muestras por bit
+Nmps=Nmpb*n_bits;                               %Número de muestras de toda la secuencia
+b2 = -21.6*(1e-12^2)/1e3;                       %[ps.ps/km]
+b3 = 0.117*(1e-12^3)/1e3;                       %[ps.ps.ps/km]
+Dz = 10e3;
+
+t1=0:Ts:(Nmps-1)*Ts;
+plot(t1,p_gauss,'r');
+hold on
+% Nb = length(sec);       %Number of bits
+% %         Tb = 1/Rb;              %Bit time
+% %         Ts = 1/fs;              %Sampling time
+%         Nspb = ceil(Tb/Ts);     %Samples per bit
+%         N = Nspb*Nb;
+%         t = [0:N-1]*Ts;
+%         As = zeros(1,N);
+%         for k = 1:length(sec),
+%             As = As + sec(k)*exp(-(1/2)*(1+j*C)*((t - Tb/2 -(k-1)*Tb)/To).^2);
+%         end       
+%         plot(t,As)
+%         hold on
+%%%%%%%%Función de la Fibra%%%%%%%%%%%%%%%%%%%
+n = 0:Nmps-1;
+w = 2*pi*(n-Nmps/2)*Fs/Nmps;
+Hd = exp(j*0.5*b2*Dz*w.*w - j*b3*w.*w.*w*Dz/6);   % Función de la fibra en el dominio de la frecuencia 
+AouF = fftshift(fft(p_gauss)).*Hd; 
+Aou = ifft(fftshift(AouF));
+plot(t1,abs(Aou),'g');
+% Aou = Fiber_L_A(p_gauss,1/Ts,[b2,b3],Dz);
+% plot(t1,abs(Aou),'g');
+
