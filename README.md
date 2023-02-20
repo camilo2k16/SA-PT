@@ -38,4 +38,4 @@ To run the software open the ``` src ``` folder using MATLAB, and run the follow
 - [Paola Castro](https://github.com/C-Paola)
 - [Sebastian Rojas](https://github.com/SRojas28)
 - [Carlos Castañeda](https://github.com/Carlos14200)
-- Miguel Bruges
+- [Miguel Bruges](https://github.com/Miguel-Bruges)
